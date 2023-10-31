@@ -1,6 +1,7 @@
 import react from 'react';
 import { Typography } from '@mui/material';
-import GetMeme from './Components/memeGenerator';
+import GetMeme from './Components/ActivityGenerator';
+import GetActivity from './Components/ActivityGenerator';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         new journey starts here
       
       
-      <GetMeme/>
+      <GetActivity/>
       </Typography>
     </div>
   );
