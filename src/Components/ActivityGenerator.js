@@ -9,9 +9,7 @@ export default function GetActivity(){
 	const value3 = post[Object.keys(post)[3]]
 	const value4 = post[Object.keys(post)[4]]
 	
-if (post[Object.keys(post)[4]] === ''){
-	console.log('No link')
-}
+
 	useEffect(()=>{
 		fetch("https://www.boredapi.com/api/activity").then((response) => response.json()).then((data) =>
 		{
@@ -24,14 +22,15 @@ if (post[Object.keys(post)[4]] === ''){
 			
 			<h1>Something to Do when you're bored!</h1>
 			{post && Object.keys(post).map((activity) => {
-			return <div> {(post[Object.keys(post)[4]] === "") ? <li>No Link</li> : <a>Link here</a>}
+			return <div> {(post[Object.keys(post)[4]] === "") ? <p> </p> : <p></p> }
 				<ul>Activity,Type, Price, and Link
 					
 					<li>{value}</li>
 					<li>{value1}</li>
 					<li>{value2}</li>
 					<li>{value3}</li>
-					<li>{value4}</li>				
+					<li>Link:{value4}  </li>
+								
 				</ul>
 				
 				</div>
